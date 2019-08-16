@@ -1,8 +1,7 @@
 [DEFAULT]
-Solicitation Date = 05/2019
 
-Sort by Award Date = False
-Sort by Value = True
+Sort by Solicitation Date = True
+Sort by Value = False
 
 Report Columns = Program Name, Organization Level 1, Organization Level 2, Organization Level 3, Opp ID,	Status,
 	Competition Type, Incumbent/Contractor,	NAICS,	Smart Tags: Products & Services	Place of Perf - Location,

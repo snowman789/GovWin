@@ -13,14 +13,14 @@ class Opportunity:
         self.mark = False
         self.delete = False
         try:
-            str_lst = str(self.opp_dict['Projected Award Date']).split('/')
+            str_lst = str(self.opp_dict['Solicitation Date']).split('/')
             if len(str_lst) == 2:
-                self.award_date = datetime.datetime(int(str_lst[1]),int(str_lst[0]), 1)
+                self.solicitation_date = datetime.datetime(int(str_lst[1]),int(str_lst[0]), 1)
             if len(str_lst) == 3:
-                self.award_date = datetime.datetime(int(str_lst[2]), int(str_lst[0]), int(str_lst[1]) )
+                self.solicitation_date = datetime.datetime(int(str_lst[2]), int(str_lst[0]), int(str_lst[1]) )
         except:
             print("Error: Award date info not found or unreadable. Setting award date to be in 01/01/3000")
-            self.award_date = datetime.datetime(1,1,3000)
+            self.solicitation_date = datetime.datetime(1,1,3000)
 
         try:
             self.value = int(self.opp_dict['Value ($K)'])

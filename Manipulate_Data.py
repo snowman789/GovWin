@@ -4,10 +4,11 @@ import Create_Excel
 import datetime
 import os
 def Manipulate_Data(data_path, save_path):
-    __location__ = os.path.realpath(
-        os.path.join(os.getcwd(), os.path.dirname(__file__)))
-
-    configFilePath = os.path.join(__location__, 'config.txt')
+    # __location__ = os.path.realpath(
+    #     os.path.join(os.getcwd(), os.path.dirname(__file__)))
+    configFilePath = os.getcwd() + '\config.txt'
+    # configFilePath = os.path.join(__location__, 'config.txt')
+    # print(configFilePath)
     opportunities_to_pass = []
     configParser= configparser.RawConfigParser()
 
@@ -68,9 +69,9 @@ def Manipulate_Data(data_path, save_path):
         if not opportunity.delete:
             opportunities_to_pass.append(opportunity)
 
-    if(config['Sort by Award Date'].lower() == 'true'):
+    if(config['Sort by Solicitation Date'].lower() == 'true'):
         try:
-            opportunities_to_pass.sort(key = lambda opportunity: opportunity.award_date)
+            opportunities_to_pass.sort(key = lambda opportunity: opportunity.solicitation_date)
         except:
             print("ERROR: Opportunities could not be sorted by date")
 
