@@ -1,0 +1,23 @@
+[DEFAULT]
+Solicitation Date = 05/2019
+
+Sort by Award Date = False
+Sort by Value = True
+
+Report Columns = Program Name, Organization Level 1, Organization Level 2, Organization Level 3, Opp ID,	Status,
+	Competition Type, Incumbent/Contractor,	NAICS,	Smart Tags: Products & Services	Place of Perf - Location,
+	Value ($K),	Duration,	Latest News,	Last Updated, Solicitation Number,	Response Date,	Solicitation Date,
+		Type of Award,	Projected Award Date,	Contract Type,	Contract Vehicle
+
+
+[Latest News]
+Mark phrases = According to the DISA Forecast of Procurement Actions Spreadsheet, second example
+Delete phrases = place anything in here, separate the phrases by commas
+
+[Smart Tags: Products & Services]
+Mark phrases = example of some phrases, second example
+Delete phrases =
+
+[Organization Level 1]
+Mark phrases = example of some phrases, second example
+Delete phrases =
