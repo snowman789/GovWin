@@ -86,8 +86,8 @@ def Manipulate_Data(data_path, save_path):
     Create_Excel.Create_Excel_File(save_path, headers, opportunities_to_pass)
 # ----------------------------------------------------------------------
 if __name__ == "__main__":
-    data_path = r'C:\Users\iroberts\Desktop\GovWin\test_excel_file.xls'
-    save_path = r'C:\Users\iroberts\Desktop\GovWin\test_results_12.xls.xlsx'
+    data_path = r'C:\Users\iroberts\Desktop\GovWinV2\test_excel_file.xls'
+    save_path = r'C:\Users\iroberts\Desktop\GovWinV2\test_results_12.xls.xlsx'
     Manipulate_Data(data_path, save_path)
 
 # tst_lst = config['testlst']

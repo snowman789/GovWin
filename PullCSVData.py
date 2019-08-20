@@ -55,6 +55,7 @@ def open_file(path):
         if row_index == 0:
             for col in mainData_sheet.row(row_index):
                 headers.append(col.value)
+            # print("index of last updated: " + str(headers.index('Last Updated')))
         else:
             link = mainData_sheet.hyperlink_map.get((row_index, 0))
             url = '(No URL)' if link is None else link.url_or_path
@@ -65,8 +66,8 @@ def open_file(path):
             temp_opportunity.hyper_link = url
             opportunities.append(temp_opportunity)
 
-
-
+    print(opportunities[2].opp_dict['Last Updated'])
+    print(opportunities[2].opp_dict['Projected Award Date'])
     # print(opportunities[2].opp_dict['Opp ID'])
     return opportunities
 
